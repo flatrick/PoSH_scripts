@@ -2,6 +2,9 @@
 This script uses the .Net library System.Net.WebClient instead of any built-in cmdlet to download a file 
 #>
 
+<# The line below is only required if you get the error-message "The request was aborted: Could not create SSL/TLS secure channel." #>
+#[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 $url = "http://where.your.file/is.located"
 $output = "$PSScriptRoot\myfilename.here"
 $start_time = Get-Date
