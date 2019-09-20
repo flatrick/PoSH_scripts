@@ -1,5 +1,5 @@
 # Variables
-
+[Microsofts page about variables](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-6)
 ## Define a new variable
 
 Variables are defined by prefixing the name with a dollar-sign `$`
