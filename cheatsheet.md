@@ -12,11 +12,14 @@ To ensure that a variable doesn't get misinterpreted, it's recommended to always
 ${VARNAME} = EXPRESSION/DATA
 ```
 From here on out, everytime I reference a variable, I will be using this form since it's the safest way of referencing variables.
+If we're not using the curly braces, there can be situations where Powershell won't be able to distinguish between the variable name and other characters.
+You could also create variables with whitespace in them if you use curly braces, but refrain from doing so since it could make it harder to find the rows containing only your variables, it could easily match "regular text".
 
 ## Using a defined variable
 
-To use a variable together with other applications or functions, just type it out in the same way as when you defined it
+To use a variable together with other applications or functions, just type it out in the same way as when you defined it.
 ```posh
+${VARNAME} = "C:\myPath\Here"
 Get-ChildItem -Path ${VARNAME}
 ```
 
