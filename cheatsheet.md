@@ -7,7 +7,7 @@ Variables are defined by prefixing the name with a dollar-sign `$`
 $VARNAME = EXPRESSION/DATA
 ```
 
-To ensure that a variable doesn't get misinterpreted, it's recommended to always enclose the variable with curly braces `{ }`
+To ensure that a variable doesn't get misinterpreted, it's recommended to always enclose the variable with curly braces `{}`
 ```posh
 ${VARNAME} = EXPRESSION/DATA
 ```
