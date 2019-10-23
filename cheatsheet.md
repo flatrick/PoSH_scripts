@@ -63,7 +63,10 @@ Write-Output "The filname is $($file.Name) and it's name including path is $($fi
 **TODO: Write more**
 
 ```posh
-<# Alternative 1 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-member?view=powershell-5.1 #>
+<# 
+# Alternative 1 
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-member?view=powershell-5.1 
+#>
 $myNewObject = New-Object -TypeName PSObject
 $myNewObject | Add-Member -NotePropertyName 'firstname' -NotePropertyValue 'Jonny'
 $myNewObject | Add-Member -NotePropertyName 'lastname' -NotePropertyValue 'Good'
@@ -75,3 +78,10 @@ lastname = 'Good'
 }
 ```
 
+## Add custom properties to existing object
+
+```posh
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-member?view=powershell-5.1 
+#>
+get-childitem "myFile.txt" | Add-Member -NotePropertyName 'Trusted' -NotePropertyValue false
+```
