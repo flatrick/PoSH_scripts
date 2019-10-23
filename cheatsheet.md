@@ -52,3 +52,9 @@ ${Files} = Get-ChildItem -Recurse -Path .\ -Include ${FileExtension}
 
 Write-Output ${Files}.FullName
 ```
+
+If you need to access a objects property in a string, you will need to use this format:
+
+```posh
+Write-Output "The filname is $($file.Name) and it's name including path is $($file.FullName)"
+``` 
