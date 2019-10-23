@@ -81,6 +81,7 @@ lastname = 'Good'
 ## Add custom properties to existing object
 
 ```posh
+<#
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-member?view=powershell-5.1 
 #>
 get-childitem "myFile.txt" | Add-Member -NotePropertyName 'Trusted' -NotePropertyValue false
