@@ -58,3 +58,20 @@ If you need to access a objects property in a string, you will need to use this 
 ```posh
 Write-Output "The filname is $($file.Name) and it's name including path is $($file.FullName)"
 ``` 
+## Create custom objects
+
+**TODO: Write more**
+
+```posh
+<# Alternative 1 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/add-member?view=powershell-5.1 #>
+$myNewObject = New-Object -TypeName PSObject
+$myNewObject | Add-Member -NotePropertyName 'firstname' -NotePropertyValue 'Jonny'
+$myNewObject | Add-Member -NotePropertyName 'lastname' -NotePropertyValue 'Good'
+
+<# Alternative 2 #>
+$myNewObject = @{
+firstname = 'Jonny'
+lastname = 'Good'
+}
+```
+
