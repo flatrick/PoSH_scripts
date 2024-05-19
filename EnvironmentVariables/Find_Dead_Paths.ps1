@@ -3,14 +3,14 @@ $userPaths = ([System.Environment]::GetEnvironmentVariable( 'PATH', 'Machine' ))
 
 Write-Host "Checking Machine environment variables for dead paths"
 foreach ($pathToTest in $machinePaths) {
-  if (-Not (Test-Path $pathToTest) {
+  if (-Not (Test-Path $pathToTest)) {
     Write-Host "MISSING! -> : $($pathtotest)"
   }
 }
 
 Write-Host "`tChecking User environment variables for dead paths"
 foreach ($pathToTest in $userPaths) {
-  if (-Not (Test-Path $pathToTest) {
+  if (-Not (Test-Path $pathToTest)) {
     Write-Host "MISSING! -> : $($pathtotest)"
   }
 }
